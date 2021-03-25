@@ -1,0 +1,19 @@
+body{
+    font-family: 'Panton';
+    font-size: 20px;
+    line-height: 24px;
+    color: #3C4852;
+}
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    min-width: 300px;
+    margin: 0px auto;
+}
+
+@media(max-width: 1200px){
+    .container{
+        padding: 0 30px;
+    }
+}

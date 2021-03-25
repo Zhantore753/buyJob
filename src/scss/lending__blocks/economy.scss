@@ -1,0 +1,74 @@
+.economy{
+    background: url('../img/economy__bg-2.png') center /cover no-repeat;
+    margin-bottom: 110px;
+    // overflow: hidden;
+    z-index: 3;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../img/economy__spread-1.png') left top /auto no-repeat;
+        z-index: -1;
+        @media(max-width: 1200px){
+            background-size: 150px;
+        }
+        @media(max-width: 768px){
+            background-size: 80px;
+        }
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: -50px;
+        right: 0;
+        background: url('../img/economy__spread-2.png') right bottom /auto no-repeat;
+        z-index: -1;
+        @media(max-width: 1200px){
+            background-size: 150px;
+        }
+        @media(max-width: 768px){
+            background-size: 120px;
+        }
+    }
+}
+
+.economy__inner{
+    padding: 220px 0 190px 0; 
+    margin-left: 35%;
+    max-width: 800px;
+    text-align: left;
+
+    font-size: 20px;
+    line-height: 34px;
+    @media(max-width:1024px){
+        margin: 0 auto;
+        padding: 110px 0 95px 0; 
+    }
+
+    @media(max-width: 768px){
+        padding: 90px 0 80px 0;
+    }
+}
+
+.economy__title{
+    justify-content: flex-start;
+    &::after{
+        left: 0;
+    }
+}
+
+.economy__text{
+    margin-top: 54px;
+}
+
+.economy__text-1{
+    margin-top: 18px;
+}
