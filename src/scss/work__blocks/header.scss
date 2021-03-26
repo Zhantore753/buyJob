@@ -10,7 +10,6 @@
     &-active{
         max-height: 1200px;
         height: 100%;
-        overflow: visible;
         @media(max-width: 517px){
             overflow: auto;
         }

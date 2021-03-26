@@ -171,7 +171,6 @@ body {
 .header-active {
   max-height: 1200px;
   height: 100%;
-  overflow: visible;
 }
 
 .header__balance-count,
