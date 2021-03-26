@@ -8,6 +8,23 @@ const menu = document.querySelector('.menu');
 
 burger.addEventListener('click', ()=>{
     window.scrollTo(pageXOffset, 0);
+    let div = document.createElement('div');
+
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+
+    document.body.append(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+
+    div.remove();
+
+    if(document.body.classList.length > 0){
+        document.body.style.paddingRight = 0;
+    }else{
+        document.body.style.paddingRight = scrollWidth+'px';
+    }
+
     document.body.classList.toggle('overflow-h');
     burger.classList.toggle('nav__burger-active');
     menu.classList.toggle('menu-active');

@@ -14,7 +14,9 @@ let path={
     src:{
         html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
         css: sourceFolder + "/scss/style.scss",
+        otherCss: sourceFolder + "/scss/main.scss",
         js: sourceFolder + "/js/script.js",
+        otherJs: sourceFolder + "/js/main.js",
         img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: sourceFolder + "/fonts/**/*.{ttf,otf}"
     },
@@ -87,8 +89,50 @@ function css(){
         .pipe(browsersync.stream())
 }
 
+function otherCss(){
+    return src(path.src.otherCss)
+        .pipe(
+            scss({
+                outputStyle: "expanded"
+            })
+        )
+        .pipe(groupmedia())
+        .pipe(
+            autoprefixer({
+                overrideBrowserList: ["last 5 versions"],
+                cascade: true
+            })
+        )
+        .pipe(dest(path.build.css))
+        .pipe(cleancss())
+        .pipe(
+            rename({
+                extname: ".min.css"
+            })
+        )
+        .pipe(dest(path.build.css))
+        .pipe(browsersync.stream())
+}
+
 function js(){
     return src(path.src.js)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.js))
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
+        .pipe(uglify())
+        .pipe(
+            rename({
+                extname: ".min.js"
+            })
+        )
+        .pipe(dest(path.build.js))
+        .pipe(browsersync.stream())
+}
+
+function otherJs(){
+    return src(path.src.otherJs)
         .pipe(fileinclude())
         .pipe(dest(path.build.js))
         .pipe(babel({
@@ -178,7 +222,9 @@ function cb(){
 function watchFiles(params){
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
+    gulp.watch([path.watch.css], otherCss);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.js], otherJs);
     gulp.watch([path.watch.img], images);
 }
 
@@ -186,13 +232,15 @@ function clean(params){
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, otherJs, otherCss, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
+exports.otherJs = otherJs;
 exports.js = js;
+exports.otherCss = otherCss;
 exports.css = css;
 exports.html = html;
 exports.build = build;

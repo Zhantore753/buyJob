@@ -1,14 +1,13 @@
 @import "nullstyle.scss";
-@import "mixins";
 @import "fonts";
 @import "core";
 
-@import "lending__blocks/header.scss";
-@import "lending__blocks/nav.scss";
-@import "lending__blocks/title.scss";
-@import "lending__blocks/advantages.scss";
-@import "lending__blocks/stage.scss";
-@import "lending__blocks/economy.scss";
-@import "lending__blocks/guarantee.scss";
-@import "lending__blocks/footer.scss";
-@import "lending__blocks/popup.scss";
+@import "landing__blocks/header.scss";
+@import "landing__blocks/nav.scss";
+@import "landing__blocks/title.scss";
+@import "landing__blocks/advantages.scss";
+@import "landing__blocks/stage.scss";
+@import "landing__blocks/economy.scss";
+@import "landing__blocks/guarantee.scss";
+@import "landing__blocks/footer.scss";
+@import "landing__blocks/popup.scss";
