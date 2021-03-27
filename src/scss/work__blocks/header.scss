@@ -6,6 +6,8 @@
     height: 100px;
     overflow: hidden;
     transition: all 0.3s;
+    position: fixed;
+    width: 100%;
 
     &-active{
         max-height: 1200px;
