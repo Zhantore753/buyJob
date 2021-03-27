@@ -4,6 +4,9 @@ body{
     line-height: 24px;
     color: #3C4852;
     background-color: #F8F8F8;
+    display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .overflow-h{
