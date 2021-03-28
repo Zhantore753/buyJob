@@ -9,6 +9,12 @@ body{
 	height: 100%;
 }
 
+.main{
+    flex: 1 0 auto;
+    padding-top: 160px;
+    padding-bottom: 90px;
+}
+
 .overflow-h{
     overflow: hidden;
 }
