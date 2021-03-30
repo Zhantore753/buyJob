@@ -12,6 +12,9 @@
     font-size: 26px;
     line-height: 31px;
     border-bottom: 1px solid #F3EEEE;
+    @media(max-width: 860px){
+        padding: 0 0 24px 28px;
+    }
 }
 
 .placing-order__form{
@@ -36,6 +39,10 @@
 
         color: #8E8D8D;
     }
+
+    @media(max-width: 860px){
+        padding: 0 16px 20px 16px;
+    }
 }
 
 .placing-order__desc-col{
@@ -46,6 +53,18 @@
     }
     &:nth-child(2){
         padding-left: 18px;
+    }
+
+    @media(max-width: 860px){
+        flex: 100%;
+        max-width: 100%;
+
+        &:nth-child(1){
+            padding-right: 0px;
+        }
+        &:nth-child(2){
+            padding-left: 0px;
+        }
     }
 }
 
@@ -124,6 +143,7 @@
     padding-bottom: 8px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
   
 .weekdays div {
@@ -138,17 +158,23 @@
   
 .days {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
     padding: 0.2rem;
 }
+
+.days__row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
   
-.days div {
+.days__row div {
     font-size: 15px;
     line-height: 18px;
     font-weight: bold;
-    margin: 2.5px 18.599px;
-    width: 38px;
+    width: calc(44.2rem / 7);
     height: 38px;
     display: flex;
     justify-content: center;
@@ -157,7 +183,7 @@
     transition: background-color 0.2s;
 }
   
-.days div:hover {
+.days__row div:hover {
     background-color: #FFCC80;
     border: 1px solid #FFCC80;
     box-sizing: border-box;
@@ -180,9 +206,14 @@
     opacity: 1;
 }
 
+.placing-order__description-label{
+    width: 100%;
+    display: block;
+}
+
 .placing-order__description{
-    max-width: 500px;
-    min-width: 500px;
+    max-width: 100%;
+    min-width: 100%;
     padding: 20px;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
@@ -192,6 +223,11 @@
     font-size: 16px;
     line-height: 19px;
     color: #8E8D8D;
+
+    @media(max-width: 860px){
+        height: 300px;
+        max-height: 500px;
+    }
 }
 
 .placing-order__file{
@@ -267,6 +303,35 @@
             white-space: nowrap; /* Запрещаем перенос строк */
             overflow: hidden; /* Обрезаем все, что не помещается в область */
             text-overflow: ellipsis; 
+        }
+    }
+}
+
+.placing-order__desc-btn{
+    input{
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;   
+        color: #3C4852;
+        padding: 28px 60px;
+        max-width: 289px;
+        width: 100%;
+        box-sizing: border-box;
+        background: #FFCC80;
+        border-radius: 10px;
+        border: 1px solid #FFCC80;
+        transition: all 0.3s;
+
+        &:hover{
+            color: #FFCC80;
+            background: #fff;  
+        }
+
+        @media(max-width: 600px){
+            padding: 16px 32px;
         }
     }
 }

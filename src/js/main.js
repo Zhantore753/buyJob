@@ -60,41 +60,53 @@ const renderCalendar = () => {
 
     document.querySelector(".date p").innerHTML = new Date().getFullYear();
 
+    let daysArr = [];
     let days = "";
 
     // отображаем дни прошлого месяца
     for (let x = firstDayIndex; x > 0; x--) {
-        days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+        daysArr.push(`<div class="prev-date date">${prevLastDay - x + 1}</div>`);
     }
 
     // отображаем дни текущего месяца
     for (let i = 1; i <= lastDay; i++) {
         if (
-        i === new Date().getDate() &&
-        date.getMonth() === new Date().getMonth()
+            i === new Date().getDate() &&
+            date.getMonth() === new Date().getMonth()
         ) {
-        days += `<div class="today">${i}</div>`;
+            daysArr.push(`<div class="today date">${i}</div>`);
         } else {
-        days += `<div>${i}</div>`;
+            daysArr.push(`<div class="date">${i}</div>`);
         }
     }
 
     // отображаем дни следующего месяца
     for (let j = 1; j <= nextDays; j++) {
-        days += `<div class="next-date">${j}</div>`;
-        monthDays.innerHTML = days;
-
-        const daysElements = monthDays.querySelectorAll('div');
-
-        daysElements.forEach(item=>{
-            item.addEventListener('click', ()=>{
-                daysElements.forEach(day=>{
-                    day.classList.remove('selected-date');
-                });
-                item.classList.add('selected-date');
-            });
-        });
+        daysArr.push(`<div class="next-date date">${j}</div>`);
     }
+
+    daysArr.forEach((item, index)=>{
+        if(index % 7 === 0){
+            days += `<div class="days__row">`;
+        }
+        days += item;
+        if(index % 7 - 6 === 0){
+            days += `</div>`;
+        }
+    });
+
+    monthDays.innerHTML = days;
+
+    const daysElements = monthDays.querySelectorAll('.date');
+
+    daysElements.forEach(item=>{
+        item.addEventListener('click', ()=>{
+            daysElements.forEach(day=>{
+                day.classList.remove('selected-date');
+            });
+            item.classList.add('selected-date');
+        });
+    });
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -142,13 +154,11 @@ const filesRender = (fileArr) => {
         item.addEventListener('click', ()=>{
             fileArr.splice(index, 1);
             filesRender(fileArr);
-            console.log(fileDeletes);
         });
     });
 }
 
 fileInput.addEventListener('change', ()=>{
-    console.log(fileInput.files);
 
     const fileArr = [];
 
