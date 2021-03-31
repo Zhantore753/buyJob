@@ -8,6 +8,7 @@
     transition: all 0.3s;
     position: fixed;
     width: 100%;
+    z-index: 2;
 
     &-active{
         height: 100%;
@@ -202,6 +203,14 @@
 
 .header__avatar{
     margin-right: 17px;
+    a{
+        display: block;
+        border-radius: 100%;
+    }
+
+    img{
+        border-radius: 100%;
+    }
 }
 
 .header__logout-btn{
