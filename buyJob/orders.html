@@ -159,85 +159,92 @@
         </div>
     </header>
 
-<section class="settings main">
+<section class="orders main">
     <div class="container">
-        <div class="settings__inner">
-            <h1 class="settings__title">Настройки</h1>
-            <div class="settings__general">
-                <div class="settings__general-col">
-                    <div class="settings__general-name">
-                        <p>Дмитрий Терехов Александрович</p>
-                        <a class="setting__general-btn" href="#">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.11042 10.982L3.74077 10.4562C5.04517 10.1955 6.23181 9.56051 7.17237 8.6199L10.0091 5.78321C11.3303 4.46201 11.3303 2.31215 10.0091 0.990942C8.6878 -0.330314 6.53804 -0.330314 5.21679 0.990942L2.3801 3.82763C1.43954 4.76819 0.804557 5.95483 0.543769 7.25928L0.0180138 9.88963C-0.0427965 10.194 0.0524573 10.5086 0.271932 10.7281C0.447771 10.9039 0.684654 11 0.928405 11C0.988937 11 1.04989 10.9941 1.11042 10.982ZM8.69616 2.30393C8.98549 2.59327 9.14486 2.97795 9.14486 3.3871C9.14486 3.79625 8.98549 4.18098 8.69616 4.47027L5.85947 7.30695C5.179 7.98743 4.32055 8.4468 3.37688 8.63541L2.11179 8.88826L2.36464 7.62321C2.55325 6.67949 3.01262 5.821 3.69309 5.14057L6.52978 2.30389C6.81912 2.01455 7.2038 1.85519 7.61295 1.85519C8.02209 1.85519 8.40682 2.0146 8.69616 2.30393Z" fill="#FFCC80"/>
-                            </svg>                            
-                        </a>
-                    </div>
-                    <div class="settings__general-email">
-                        <p><span>Email:  </span>qwerty123456@gmail.com</p>
-                        <a class="setting__general-btn" href="#">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.11042 10.982L3.74077 10.4562C5.04517 10.1955 6.23181 9.56051 7.17237 8.6199L10.0091 5.78321C11.3303 4.46201 11.3303 2.31215 10.0091 0.990942C8.6878 -0.330314 6.53804 -0.330314 5.21679 0.990942L2.3801 3.82763C1.43954 4.76819 0.804557 5.95483 0.543769 7.25928L0.0180138 9.88963C-0.0427965 10.194 0.0524573 10.5086 0.271932 10.7281C0.447771 10.9039 0.684654 11 0.928405 11C0.988937 11 1.04989 10.9941 1.11042 10.982ZM8.69616 2.30393C8.98549 2.59327 9.14486 2.97795 9.14486 3.3871C9.14486 3.79625 8.98549 4.18098 8.69616 4.47027L5.85947 7.30695C5.179 7.98743 4.32055 8.4468 3.37688 8.63541L2.11179 8.88826L2.36464 7.62321C2.55325 6.67949 3.01262 5.821 3.69309 5.14057L6.52978 2.30389C6.81912 2.01455 7.2038 1.85519 7.61295 1.85519C8.02209 1.85519 8.40682 2.0146 8.69616 2.30393Z" fill="#FFCC80"/>
-                            </svg>                            
-                        </a>
-                    </div>
-                </div>
-                <div class="settings__general-id">
-                    <p><span>ID: </span>1122334455</p>
-                </div>
+        <div class="orders__inner">
+            <div class="orders__head support__head">
+                <h1 class="orders__head-title support__head-title">Мои заказы</h1>
             </div>
-            <div class="settings__edu">
-                <h2 class="settings__edu-title">Образование</h2>
-                <form class="settings__edu-form" action="#">
-                    <div class="settings__edu-form-row settings__edu-form-row-1">
-                        <input type="text" name="institution" placeholder="Учебное заведение">
+            <ul class="orders__list support__list">
+                <li class="orders__item orders__item-search support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
                     </div>
-                    <div class="settings__edu-form-row settings__edu-form-row-2">
-                        <input type="text" name="faculty" placeholder="Факультет">
-                        <input type="text" name="specialty" placeholder="Специальность">
-                        <input type="text" name="status" placeholder="Статус">
-                        <input type="number" name="course" placeholder="Курс">
-                    </div>
-
-                    <input class="settings__form-btn" type="submit" value="Сохранить">
-                </form>
-            </div>
-            <div class="settings__password">
-                <h2 class="settings__password-title">Пароль</h2>
-                <form class="settings__password-form" action="#">
-                    <div class="settings__password-form-row">
-                        <div class="form__pass">
-                            <input type="text" name="newpass" placeholder="Новый пароль">
-                            <a class="form__pass-btn" href="#">
-                                <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.50008 3.90912C8.07076 3.90912 6.90918 5.0707 6.90918 6.50003C6.90918 7.92936 8.07076 9.09093 9.50008 9.09093C10.9294 9.09093 12.091 7.92936 12.091 6.50003C12.091 5.0707 10.9294 3.90912 9.50008 3.90912Z" fill="#C4C4C4"/>
-                                    <path d="M9.50002 0.0227489C5.18182 0.0227489 1.49411 2.70863 0 6.50003C1.49411 10.2914 5.18182 12.9773 9.50002 12.9773C13.8225 12.9773 17.5059 10.2914 19 6.50003C17.5059 2.70863 13.8225 0.0227489 9.50002 0.0227489ZM9.50002 10.8182C7.11638 10.8182 5.18182 8.88363 5.18182 6.49999C5.18182 4.11635 7.11638 2.18183 9.50002 2.18183C11.8837 2.18183 13.8182 4.11639 13.8182 6.50003C13.8182 8.88367 11.8837 10.8182 9.50002 10.8182Z" fill="#C4C4C4"/>
-                                </svg> 
-                            </a>
-                        </div>
-                        <div class="form__pass">
-                            <input type="text" name="newpassrepeat" placeholder="Новый пароль ещё раз">
-                            <a class="form__pass-btn" href="#">
-                                <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.50008 3.90912C8.07076 3.90912 6.90918 5.0707 6.90918 6.50003C6.90918 7.92936 8.07076 9.09093 9.50008 9.09093C10.9294 9.09093 12.091 7.92936 12.091 6.50003C12.091 5.0707 10.9294 3.90912 9.50008 3.90912Z" fill="#C4C4C4"/>
-                                    <path d="M9.50002 0.0227489C5.18182 0.0227489 1.49411 2.70863 0 6.50003C1.49411 10.2914 5.18182 12.9773 9.50002 12.9773C13.8225 12.9773 17.5059 10.2914 19 6.50003C17.5059 2.70863 13.8225 0.0227489 9.50002 0.0227489ZM9.50002 10.8182C7.11638 10.8182 5.18182 8.88363 5.18182 6.49999C5.18182 4.11635 7.11638 2.18183 9.50002 2.18183C11.8837 2.18183 13.8182 4.11639 13.8182 6.50003C13.8182 8.88367 11.8837 10.8182 9.50002 10.8182Z" fill="#C4C4C4"/>
-                                </svg> 
-                            </a>
-                        </div>
-                        <div class="form__pass">
-                            <input type="text" name="oldpass" placeholder="Старый пароль">
-                            <a class="form__pass-btn" href="#">
-                                <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.50008 3.90912C8.07076 3.90912 6.90918 5.0707 6.90918 6.50003C6.90918 7.92936 8.07076 9.09093 9.50008 9.09093C10.9294 9.09093 12.091 7.92936 12.091 6.50003C12.091 5.0707 10.9294 3.90912 9.50008 3.90912Z" fill="#C4C4C4"/>
-                                    <path d="M9.50002 0.0227489C5.18182 0.0227489 1.49411 2.70863 0 6.50003C1.49411 10.2914 5.18182 12.9773 9.50002 12.9773C13.8225 12.9773 17.5059 10.2914 19 6.50003C17.5059 2.70863 13.8225 0.0227489 9.50002 0.0227489ZM9.50002 10.8182C7.11638 10.8182 5.18182 8.88363 5.18182 6.49999C5.18182 4.11635 7.11638 2.18183 9.50002 2.18183C11.8837 2.18183 13.8182 4.11639 13.8182 6.50003C13.8182 8.88367 11.8837 10.8182 9.50002 10.8182Z" fill="#C4C4C4"/>
-                                </svg> 
-                            </a>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-status support__item-status">
+                            <p>Подбор исполнителей</p>
                         </div>
                     </div>
-                                           
-                    <input class="settings__form-btn" type="submit" value="Изменить">
-                </form>
-            </div>
+                </li>
+                <li class="orders__item orders__item-done support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-cost">
+                            <p><span>Цена: </span>1234 ₽</p>
+                        </div>
+                        <div class="orders__item-executor">
+                            <p>Исполнитель: НИК</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders__item orders__item-done support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-cost">
+                            <p><span>Цена: </span>1234 ₽</p>
+                        </div>
+                        <div class="orders__item-executor">
+                            <p>Исполнитель: НИК</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders__item orders__item-cancel support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-status orders__item-status-search support__item-status">
+                            <p>Заказ отменён</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders__item orders__item-done support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-cost">
+                            <p><span>Цена: </span>1234 ₽</p>
+                        </div>
+                        <div class="orders__item-executor">
+                            <p>Исполнитель: НИК</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders__item orders__item-done support__item">
+                    <div class="orders__item-col support__item-col">
+                        <h3 class="orders__item-title support__item-title">Название заказа</h3>
+                        <p class="orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="orders__item-col support__item-col">
+                        <div class="orders__item-cost">
+                            <p><span>Цена: </span>1234 ₽</p>
+                        </div>
+                        <div class="orders__item-executor">
+                            <p>Исполнитель: НИК</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

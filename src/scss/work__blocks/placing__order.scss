@@ -175,8 +175,10 @@
     line-height: 18px;
     font-weight: bold;
     width: calc(44.2rem / 7);
+    border: 1px solid transparent;
     height: 38px;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -186,7 +188,6 @@
 .days__row div:hover {
     background-color: #FFCC80;
     border: 1px solid #FFCC80;
-    box-sizing: border-box;
     cursor: pointer;
 }
   

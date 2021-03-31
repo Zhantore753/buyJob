@@ -1024,8 +1024,10 @@ body {
   line-height: 18px;
   font-weight: bold;
   width: calc(44.2rem / 7);
+  border: 1px solid transparent;
   height: 38px;
   display: flex;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -1035,7 +1037,6 @@ body {
 .days__row div:hover {
   background-color: #FFCC80;
   border: 1px solid #FFCC80;
-  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -1176,6 +1177,62 @@ body {
 .placing-order__desc-btn input:hover {
   color: #FFCC80;
   background: #fff;
+}
+
+.orders__item {
+  padding: 21px 35px 21px 45px;
+}
+
+.orders__item-search .orders__item-status {
+  color: #E1B26C;
+}
+
+.orders__item-cancel .orders__item-title {
+  color: #EC5760;
+}
+
+.orders__item-cancel .orders__item-status {
+  color: #EC5760;
+}
+
+.orders__item-done .orders__item-title {
+  color: #66B87A;
+}
+
+.orders__item-subtitle {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.orders__item-status {
+  font-size: 18px;
+}
+
+.orders__item-col {
+  flex-wrap: wrap;
+}
+
+.orders__item-cost {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #66B87A;
+  text-align: right;
+  margin-left: 20px;
+}
+
+.orders__item-cost span {
+  color: #3C4852;
+  font-weight: 400;
+}
+
+.orders__item-executor {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #8E8D8D;
+  margin-left: 20px;
 }
 
 @media (max-width: 1381px) {
