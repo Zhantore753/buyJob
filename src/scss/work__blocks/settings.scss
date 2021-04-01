@@ -28,6 +28,42 @@
     }
 }
 
+.settings__general-col{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+
+    @media(max-width: 565px){
+        justify-content: center;
+    }
+}
+
+.settings__general-avatar{
+    background: #FFFFFF;
+    border: 1px solid #DBD5D5;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 80px;
+    max-height: 80px;
+    width: 100%;
+    margin-right: 27px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    margin-bottom: 12px;
+    .setting__general-btn{
+        position: absolute;
+        height: 27px;
+        bottom: 8px;
+        right: 8px;
+    }
+    
+}
+
 .settings__general-name{
     display: flex;
     align-items: center;
