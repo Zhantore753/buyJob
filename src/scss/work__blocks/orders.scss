@@ -50,6 +50,10 @@
         color: #3C4852;
         font-weight: 400;
     }
+
+    @media(max-width: 534px){
+        margin-left: 0;
+    }
 }
 
 .orders__item-executor{
@@ -59,4 +63,8 @@
     line-height: 24px;
     color: #8E8D8D;
     margin-left: 20px;
+
+    @media(max-width: 534px){
+        margin-left: 0;
+    }
 }
