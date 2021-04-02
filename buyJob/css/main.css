@@ -965,15 +965,31 @@ body {
 
 .custom-select {
   width: 100%;
+  display: flex;
+  align-items: center;
   border: 1px solid #E5E5E5;
   border-radius: 10px;
-  padding-right: 35px;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .custom-select select {
+  position: relative;
   border: none;
   margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 50%;
+}
+
+.custom-select select::-ms-expand {
+  /* для IE */
+  display: none;
 }
 
 .calendar {
@@ -1797,6 +1813,81 @@ body {
   margin-left: 16px;
 }
 
+.search__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.search__filter {
+  display: flex;
+  align-items: center;
+}
+
+.custom-select-search {
+  margin-bottom: 0;
+}
+
+.custom-select-search select {
+  width: 100%;
+  padding: 18px 58px 18px 24px;
+}
+
+.custom-select-search:first-child {
+  margin-right: 15px;
+}
+
+.search__list {
+  margin-top: 40px;
+}
+
+.search__item {
+  cursor: auto;
+}
+
+.search__item-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__item-details p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.search__item-details a {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #3C4852;
+  border: 1px solid #FFCC80;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 36px;
+  transition: all 0.3s;
+}
+
+.search__item-details a:hover {
+  background-color: #FFCC80;
+}
+
 @media (max-width: 1381px) {
   .header__balance {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -2037,6 +2128,16 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  .search__header {
+    flex-direction: column;
+  }
+
+  .search__filter {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 695px) {
   .header__orders {
     display: none;
@@ -2196,6 +2297,20 @@ body {
   .dialog__form-sumbit-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .search__header {
+    justify-content: center;
+  }
+
+  .search__filter {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .custom-select-search:first-child {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 

@@ -159,126 +159,104 @@
         </div>
     </header>
 
-<section class="placing-order main">
+<section class="search main">
     <div class="container">
-        <div class="placing-order__inner">
-            <h1 class="placing-order__title">Размещение заказа</h1>
-            <form class="placing-order__form">
-                <div class="placing-order__desc-col">
-                    <label for="type-select">Тип работы</label>
-                    <div class="custom-select">
+        <div class="search__inner">
+            <div class="search__header">
+                <h1 class="search__title">Новые заказы</h1>
+                <form class="search__filter" >
+                    <div class="custom-select-search custom-select">
                         <select name="type" class="placing-order__form-type" id="type-select">
-                            <option value="0" hidden disabled selected>Выпадающий список</option>
-                            <option value="1">Работа ради денег</option>
-                            <option value="2">Работа для старта карьеры</option>
-                            <option value="3">Работа как образ жизни</option>
+                            <option value="0" hidden disabled selected>Выберете предмет</option>
+                            <option value="1">Lorem, ipsum dolor.</option>
+                            <option value="2">Lorem, ipsum dolor.</option>
+                            <option value="3">Lorem, ipsum dolor.</option>
                         </select>
                     </div>
-                    <label for="subject">Предмет</label>
-                    <input name="subject" type="text" id="subject" class="placing-order__form-subject" placeholder="Введите ваш предмет">
-                    <label for="title">Название</label>
-                    <input name="title" type="text" id="title" class="placing-order__form-title" placeholder="Введите название">
-                    
-                    <div class="calendar">
-                        <div class="month">
-                            <p class="calendar__title">Срок сдачи</p>
-                            <div class="month__controller">
-                                <svg class="prev" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.11099 8.0853L7.34117 14.7604C7.48526 14.9149 7.67762 15 7.88272 15C8.08783 15 8.28018 14.9149 8.42428 14.7604L8.88309 14.2689C9.18164 13.9487 9.18164 13.4282 8.88309 13.1084L3.65146 7.50311L8.88889 1.89157C9.03299 1.73706 9.11255 1.53109 9.11255 1.31145C9.11255 1.09158 9.03299 0.885603 8.88889 0.730969L8.43008 0.239633C8.28587 0.0851212 8.09363 1.04275e-06 7.88853 1.06068e-06C7.68342 1.07861e-06 7.49107 0.0851213 7.34697 0.239633L1.11099 6.9208C0.966551 7.0758 0.887219 7.28275 0.887674 7.50274C0.887219 7.7236 0.966551 7.93042 1.11099 8.0853Z" fill="#8E8D8D"/>
-                                </svg>
-                                <div class="date">
-                                    <h2></h2>
-                                    <p></p>
-                                </div>
-                                <svg class="next" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.88901 6.9147L2.65883 0.239632C2.51474 0.0851213 2.32238 0 2.11728 0C1.91217 0 1.71982 0.0851213 1.57572 0.239632L1.11691 0.731092C0.818362 1.05133 0.818362 1.57182 1.11691 1.89157L6.34854 7.49689L1.11111 13.1084C0.967011 13.2629 0.887451 13.4689 0.887451 13.6885C0.887451 13.9084 0.967011 14.1144 1.11111 14.269L1.56992 14.7604C1.71413 14.9149 1.90637 15 2.11147 15C2.31658 15 2.50893 14.9149 2.65303 14.7604L8.88901 8.0792C9.03345 7.9242 9.11278 7.71725 9.11233 7.49726C9.11278 7.2764 9.03345 7.06958 8.88901 6.9147Z" fill="#8E8D8D"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="calendar__body">
-                            <div class="weekdays">
-                                <div>ПН</div>
-                                <div>ВТ</div>
-                                <div>СР</div>
-                                <div>ЧТ</div>
-                                <div>ПТ</div>
-                                <div>СБ</div>
-                                <div>ВС</div>
-                            </div>
-                            <div class="days">
-                                <div class="days__row">
-                                    <div class="prev-date">28</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                </div>
-                                <div class="days__row">
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
-                                    <div>10</div>
-                                    <div>11</div>
-                                    <div>12</div>
-                                    <div>13</div>
-                                </div>
-                                <div class="days__row">
-                                    <div>14</div>
-                                    <div>15</div>
-                                    <div>16</div>
-                                    <div>17</div>
-                                    <div>18</div>
-                                    <div>19</div>
-                                    <div>20</div>
-                                </div>
-                                <div class="days__row">
-                                    <div>21</div>
-                                    <div>22</div>
-                                    <div>23</div>
-                                    <div>24</div>
-                                    <div>25</div>
-                                    <div>26</div>
-                                    <div>27</div>      
-                                </div>
-                                <div class="days__row">
-                                    <div>28</div>
-                                    <div>29</div>
-                                    <div class="today">30</div>
-                                    <div>31</div>
-                                    <div class="next-date">1</div>
-                                    <div class="next-date">2</div>
-                                    <div class="next-date">3</div>
-                                </div>
-                            </div>
+                    <div class="custom-select-search custom-select">
+                        <select name="type" class="placing-order__form-type" id="type-select">
+                            <option value="0" hidden disabled selected>Тип работы</option>
+                            <option value="1">Lorem, ipsum dolor.</option>
+                            <option value="2">Lorem, ipsum dolor.</option>
+                            <option value="3">Lorem, ipsum dolor.</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <ul class="search__list orders__list support__list">
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
                         </div>
                     </div>
-
-                    <label for="cost">Цена</label>
-                    <input name="cost" type="number" id="cost" class="placing-order__form-cost" placeholder="Введите вашу цену">
-                    <label for="originality">Требуемая оригинальность</label>
-                    <input name="originality" type="text" id="originality" class="placing-order__form-originality" placeholder="Требуемая оригинальность">
-                </div>
-                <div class="placing-order__desc-col">
-                    <label class="placing-order__description-label" for="description">Описание работы</label>
-                    <textarea class="placing-order__description" name="description" id="description" cols="30" rows="10"></textarea>
-                    <input class="placing-order__file" type="file" id="file" name="file" multiple>
-                    <label for="file" class="placing-order__file-btn">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.6891 1.68344C10.9443 -0.0614726 8.10503 -0.0614726 6.35989 1.68344L0.934674 7.10863C-0.311627 8.35507 -0.311545 10.3831 0.934838 11.6295C1.55808 12.2527 2.37648 12.5643 3.19521 12.5643C4.01372 12.5642 4.83255 12.2526 5.45569 11.6295L10.4286 6.65639C10.7909 6.29414 10.9905 5.81248 10.9906 5.30017C10.9906 4.78783 10.7911 4.3062 10.4287 3.94384C9.68082 3.19602 8.46391 3.19604 7.71617 3.94398L4.46404 7.19602C4.21437 7.44567 4.21437 7.8505 4.46399 8.1002C4.71364 8.34993 5.11846 8.34985 5.36816 8.1002L8.62032 4.84812C8.86961 4.59883 9.27518 4.59878 9.5245 4.84807C9.64525 4.96882 9.71177 5.12938 9.71177 5.30014C9.71177 5.47091 9.64527 5.63141 9.5245 5.75222L4.55151 10.7253C3.80364 11.4731 2.58684 11.4732 1.83901 10.7253C1.09119 9.97746 1.09114 8.7606 1.83888 8.01273L7.26407 2.58762C8.51056 1.34118 10.5386 1.34118 11.7849 2.58762C12.3888 3.19137 12.7213 3.99415 12.7213 4.84802C12.7213 5.70188 12.3887 6.50466 11.7849 7.10847L6.35981 12.5337C6.11016 12.7834 6.11016 13.1882 6.35987 13.4379C6.48472 13.5628 6.64834 13.6252 6.81194 13.6252C6.97557 13.6252 7.13919 13.5627 7.26404 13.4379L12.6891 8.01267C13.5344 7.16739 14 6.04351 14 4.84804C14 3.6526 13.5344 2.52872 12.6891 1.68344Z" fill="white"/>
-                        </svg>
-                        <span>Добавить файл</span>
-                    </label>
-                    <p class="placing-order__files">Добавленные файлы:</p>
-                    <ul class="placing-order__addedfiles">
-                        Ничего не было добавленно
-                    </ul>
-                </div>
-                <div class="placing-order__desc-btn">
-                    <input type="submit"  value="Разместить заказ">
-                </div>
-            </form>
+                </li>
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="search__item orders__item support__item">
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <h3 class="search__item-title orders__item-title support__item-title">Название заказа</h3>
+                        <p class="search__item-subtitle orders__item-subtitle support__item-subtitle">Предмет, Тип задачи</p>
+                    </div>
+                    <div class="search__item-col orders__item-col support__item-col">
+                        <div class="search__item-details">
+                            <p>Сделать до 11.00.11</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
