@@ -38,16 +38,18 @@
     display: block;
     padding: 1px;
     position: absolute;
-    right: 26px;
-    top: 26px;
+    right: 13px;
+    top: 13px;
+    width: 26px;
+    height: 26px;
     font-size: 20px;
     text-decoration: none;
     color: #3C4852;
-    width: 12px;
 
     &::after{
         position: absolute;
         content: '';
+        top: 13px;
         width: 24px;
         height: 2px;
         transform: rotate(45deg);
@@ -57,6 +59,7 @@
     &::before{
         position: absolute;
         content: '';
+        top: 13px;
         width: 24px;
         height: 2px;
         transform: rotate(-45deg);

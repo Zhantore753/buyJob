@@ -2048,6 +2048,217 @@ body {
   background: transparent;
 }
 
+.reg__header {
+  background: #3C4852;
+}
+
+.reg__header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.questionary {
+  margin-top: 92px;
+}
+
+.questionary__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionary__inner-title,
+.questionary__form {
+  max-width: 784px;
+  width: 100%;
+}
+
+.questionary__form {
+  margin-bottom: 87px;
+}
+
+.questionary__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.questionary__title span {
+  display: block;
+  font-weight: 700;
+}
+
+.questionary__form-item {
+  padding: 30px 40px;
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.questionary__form-item input {
+  border: 1px solid #E6E1E1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  padding: 16px;
+}
+
+.questionary__form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
+.questionary__form-area-radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.questionary__form-area-radio input {
+  width: unset;
+}
+
+.questionary__form-area-radio-item {
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #E6E1E1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 13px 13px 13px 53px;
+  transition: all 0.3s;
+  margin-bottom: 12px;
+}
+
+.questionary__form-area-radio-item-active {
+  background: #3C4852;
+  border: 1px solid #3C4852;
+  color: #fff;
+}
+
+.questionary__form-area-radio-item:hover {
+  background: #3C4852;
+  border: 1px solid #3C4852;
+  color: #fff;
+}
+
+.questionary__form-area-radio-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.questionary__form-area-radio-item .radio-checkmark {
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  height: 26px;
+  width: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #BEC4C9;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.questionary__form-area-radio-item .radio-checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFCC80;
+  transition: all 0.3s;
+}
+
+.questionary__form-area-radio-item input:checked ~ .radio-checkmark:after {
+  opacity: 1;
+}
+
+input:checked ~ .questionary__form-area-radio-item {
+  background: #3C4852;
+  border: 1px solid #3C4852;
+  color: #fff;
+}
+
+.questionary__form-edu-item {
+  margin-bottom: 24px;
+}
+
+.questionary__form-edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.questionary__form-select {
+  margin-bottom: 0;
+}
+
+.questionary__form-select select {
+  width: 100%;
+  padding: 16px 28px;
+  background-position-x: 95%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8E8D8D;
+}
+
+.questionary__form-edu-institution {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.questionary__form-edu-institution-item {
+  max-width: 345px;
+  width: 100%;
+}
+
+.questionary__form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.questionary__form-submit input {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 0;
+  background: #FFCC80;
+  border: 1px solid #FFCC80;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  max-width: 290px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.questionary__form-submit input:hover {
+  background: #fff;
+}
+
 @media (max-width: 1381px) {
   .header__balance {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -2297,6 +2508,18 @@ body {
 
   .dialog__form-sumbit-btn p {
     display: none;
+  }
+
+  .questionary {
+    margin-top: 44px;
+  }
+
+  .questionary__form {
+    margin-bottom: 44px;
+  }
+
+  .questionary__form-item {
+    padding: 15px 20px;
   }
 }
 

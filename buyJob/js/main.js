@@ -2,11 +2,13 @@ const burger = document.querySelector('.nav__burger');
 const header = document.querySelector('.header');
 const pageDoc = window.location.pathname;
 
-burger.addEventListener('click', ()=>{
-    document.body.classList.toggle('overflow-h');
-    burger.classList.toggle('nav__burger-active');
-    header.classList.toggle('header-active');
-});
+if(burger){
+    burger.addEventListener('click', ()=>{
+        document.body.classList.toggle('overflow-h');
+        burger.classList.toggle('nav__burger-active');
+        header.classList.toggle('header-active');
+    });
+}
 
 if(pageDoc.includes("placing__order")){
 
@@ -172,4 +174,18 @@ if(pageDoc.includes("placing__order")){
         filesRender(fileArr);
     });
 
+}
+
+const radioBtns = document.querySelectorAll('.questionary__form-area-radio-item');
+
+
+if(pageDoc.includes("reg__exec")){
+    radioBtns.forEach(item=>{
+        item.addEventListener('click', ()=>{
+            radioBtns.forEach(i=>{
+                i.classList.remove('questionary__form-area-radio-item-active');
+            })
+            item.classList.toggle('questionary__form-area-radio-item-active');
+        });
+    });
 }
